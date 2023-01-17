@@ -42,6 +42,10 @@
     - The scale up animation uses an ease-out
     - The scale down uses an ease-in
 
+**Example:**
+
+![Example](./examples/01.gif "Example")
+
 ## Animating Properties
 
 1. Setup application
@@ -64,6 +68,10 @@
   - `tint: 0xff0000`
 - Make all animations last for 2 seconds and start with a delay of 1 second
 
+**Example:**
+
+![Example](./examples/02.gif "Example")
+
 ## Interactivity
 
 1. Adjust animations
@@ -80,6 +88,10 @@
 - When the user clicks, track the direction of the animation for each box:
   - If the animation is reversed, play it forward
   - Otherwise, reverse it
+
+**Example:**
+
+![Example](./examples/03.gif "Example")
 
 ## Fireworks
 
@@ -130,7 +142,11 @@
 
 - Test the fireworks!
 
-## Gears
+**Example:**
+
+![Example](./examples/04.gif "Example")
+
+## Spinning Gears
 
 1. Setup application
 - Open the `gears.ts` file
@@ -189,3 +205,40 @@
 - Load the `speed-paused.png`, `speed-normal.png`, `speed-fast.png` and `speed-faster.png` assets
 - Render a sprite for each of the 4 textures over the `gearbox` sprite
 - Make the four buttons interactive and add a `pointertap` event listener, which executes the corresponing speed controlling function from Section 2.
+
+**Example:**
+
+![Example](./examples/05.gif "Example")
+
+## **(BONUS)** Clock
+
+Using the gears from the **Spinning Gears** task, arrange them in such a way as to create a clock with three indicators: 1 second, 60 seconds and 60 minutes.
+
+- Use a **Graphics** object to draw a clock hand for each of the indicators. It can be a seperate object, or part of a gear sprite (remember, sprites are just containers and can have children)
+- You need to achieve the following speeds:
+  - For the second hand, 1 revolution per second (60 rpm)
+  - For the seconds hand, 1 revolution per minute (1 rpm)
+  - For the minutes hand, 1 revolution per hour (1/60 rpm)
+- **HINT:** The following gear rations might be helpful:
+
+  - 12/16 = 3/4
+  - 12/20 = 3/5
+  - 12/24 = 1/2
+  - 12/28 = 3/7
+  - 12/40 = 3/10
+
+  - 16/20 = 4/5
+  - 16/24 = 2/3
+  - 16/28 = 4/7
+  - 16/40 = 2/5
+
+  - 20/24 = 5/6
+  - 20/28 = 5/7
+  - 20/40 = 1/2
+
+  - 24/28 = 6/7
+  - 24/40 = 3/5
+
+  - 28/40 = 7/10
+
+- **TIP:** Make the canvas bigger, or scale down the gear assets
