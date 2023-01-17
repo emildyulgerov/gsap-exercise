@@ -129,3 +129,63 @@
 ```
 
 - Test the fireworks!
+
+## Gears
+
+1. Setup application
+- Open the `gears.ts` file
+- Import the Pixi library and create an application with 800x600 resolution, using color **0x999999** for the background. Add the application's view to the page
+- Import the GSAP library and Pixi plugin. Regsiter the Pixi plugin with the GSAP instance and register the Pixi library with the plugin instance
+
+2. Load assets
+- By using **PIXI.Assets**, load all gear images from the `assets` folder
+
+3. Create gear spawning function
+- Create a function `spawnGear` which creates a new sprite
+- The number and type of parameters is up to you
+- Upon execution, the function:
+  - Creates a new sprite, using one of the previously loaded gear textures
+  - Sets the sprite's anchor such that chaning the rotation of the object appears to rotate the gear about its axis
+  - Sets the position of the sprite such that the axis of the gear is centered on given coordinates
+  - Applies a looping animation to the gear with linear easing and given duration
+
+4. Create and position animated gears
+- Using the `gear40.png` texture:
+  - Centered at **400,300**
+  - Rotating 360 degrees **clockwise**
+  - Animation duration **20 seconds**
+- Using the `gear12.png` texture:
+  - Centered at **300,117**
+  - Rotating 360 degrees **counter-clockwise**
+  - Animation duration **6 seconds**
+- Using the `gear28.png` texture:
+  - Centered at **142,130**
+  - Rotating 360 degrees **clockwise**
+  - Animation duration **14 seconds**
+- Using the `gear16.png` texture:
+  - Centered at **542,471**
+  - Rotating 360 degrees **counter-clockwise**
+  - Animation duration **8 seconds**
+- Using the `gear24.png` texture:
+  - Centered at **676,388**
+  - Rotating 360 degrees **clockwise**
+  - Animation duration **12 seconds**
+- Using the `gear20.png` texture:
+  - Centered at **212,441**
+  - Rotating 360 degrees **counter-clockwise**
+  - Animation duration **10 seconds**
+
+5. Add speed controls
+- Modify the gear spawning function such that the created animation is exposed (returned or added to some globally-accessible scope)
+- Create four speed controlling functions and make then modify the `timeScale` property of each gear animation:
+  - `pause` - pauses the animation
+  - `normal` - plays the animation at 1x speed
+  - `fast` - plays the animation at 2x speed
+  - `faster` - plays the animation at 4x speed
+- **Tip:** to test the functions, add them to the `window` global object
+
+6. Add interactivity
+- Load the `gearbox.png` asset and render a sprite with this texture centered on the largest gear
+- Load the `speed-paused.png`, `speed-normal.png`, `speed-fast.png` and `speed-faster.png` assets
+- Render a sprite for each of the 4 textures over the `gearbox` sprite
+- Make the four buttons interactive and add a `pointertap` event listener, which executes the corresponing speed controlling function from Section 2.

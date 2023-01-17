@@ -10,6 +10,7 @@ module.exports = {
         'fireworks': './src/fireworks.ts',
         'gears': './src/gears.ts',
         'zipper': './src/zipper.ts',
+        'clock': './src/clock.ts',
     },
     module: {
         rules: [
